@@ -14,6 +14,6 @@ public class User {
     private Integer id;
     private String name;
 
-    @OneToMany(mappedBy = "user")
+    @ManyToMany(mappedBy = "users")
     private List<Laptop> laptop;
 }
