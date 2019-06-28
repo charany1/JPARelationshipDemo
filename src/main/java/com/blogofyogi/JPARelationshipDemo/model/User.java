@@ -3,6 +3,7 @@ package com.blogofyogi.JPARelationshipDemo.model;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
@@ -13,6 +14,6 @@ public class User {
     private Integer id;
     private String name;
 
-    @OneToOne
-    private Laptop laptop;
+    @OneToMany(mappedBy = "user")
+    private List<Laptop> laptop;
 }
